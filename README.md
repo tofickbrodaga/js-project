@@ -93,29 +93,4 @@ npm install
   createdAt: Date,
   updatedAt: Date
 }
-```
-
-
-### API Маршруты
-
-Аутентификация (/api/auth)
-
-Метод	Эндпоинт	Описание	Аутентификация	Тело запроса
-POST	/register	Регистрация	❌	{username, email, password}
-POST	/login	Вход	❌	{email, password}
-GET	/me	Профиль	✅	-
-Доски (/api/boards)
-
-Метод	Эндпоинт	Описание	Аутентификация
-GET	/	Мои доски	✅
-POST	/	Создать доску	✅	{name, description, isPublic}
-GET	/:id	Получить доску	✅
-PUT	/:id	Обновить доску	✅	{name, description, isPublic}
-DELETE	/:id	Удалить доску	✅
-Задачи (/api/tasks)
-
-Метод	Эндпоинт	Описание	Аутентификация
-POST	/	Создать задачу	✅	{title, description, type, priority, board, column, ...}
-GET	/board/:boardId	Задачи доски	✅
-PUT	/:id	Обновить задачу	✅	{title, description, status, assignee, ...}
-POST	/:id/comments	Добавить комментарий	✅	{content}
+``` 
